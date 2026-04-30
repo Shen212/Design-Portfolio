@@ -1,0 +1,17 @@
+{
+  "name": "ImageLibrary",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Image name/label"
+    },
+    "url": {
+      "type": "string",
+      "description": "Image URL"
+    }
+  },
+  "required": [
+    "url"
+  ]
+}
