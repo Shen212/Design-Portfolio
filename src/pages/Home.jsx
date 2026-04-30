@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { base44 } from '@/api/base44Client';
-import { useQuery } from '@tanstack/react-query';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const RESUME_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6982c841a897702d6e66ef31/b24cafe04_NathanResume26.pdf";
@@ -22,7 +20,7 @@ const navItems = [
   { num: "004", label: "Contact", id: "contact" }
 ];
 
-const fallbackProjects = [
+const projects = [
   { title: "Wave Energy Converter", desc: "Designed and manufactured a miniature WEC to power ocean telemetry devices.", fullDesc: "Designed, manufactured and presented a miniature wave energy converter to power ocean telemetry devices which won the award for 'Most Practical Design' at the engineering capstone symposium.", tags: ["Capstone", "Manufacturing", "Renewable Energy"], images: [] },
   { title: "Robotic Manufacturing Cells", desc: "Engineered robotic manufacturing cells and custom tooling for FANUC arms.", fullDesc: "Engineered robotic manufacturing cells and custom tooling for FANUC arms using SolidWorks, DFMA principles, and simulation.", tags: ["Robotics", "FANUC", "SolidWorks"], images: [] },
   { title: "Precision Laser Optics Fixtures", desc: "Designed fixtures for manufacturing precision laser optics with 100 micron accuracy.", fullDesc: "Designed fixtures for the manufacturing of precision laser optics accounting for Hermetics, light exposure and ESD properties.", tags: ["Precision Engineering", "Optics", "PLM"], images: [] },
@@ -31,7 +29,7 @@ const fallbackProjects = [
   { title: "CNC Wooden Catch-All Tray", desc: "Designed and CNC-routed a wooden tray with optimized toolpaths.", fullDesc: "Designed and CNC-routed a wooden catch-all tray, developing optimal toolpaths using CAM software.", tags: ["CNC", "CAM", "Woodworking"], images: [] }
 ];
 
-const fallbackExperiences = [
+const experiences = [
   { company: "Tesla", role: "Mechanical Engineering Intern", period: "Summer 2024", description: "Worked on battery thermal management systems for next-generation EV platforms." },
   { company: "Boeing", role: "Design Engineering Co-op", period: "2023 - 2024", description: "Contributed to structural analysis of aircraft components using CATIA and ANSYS." },
   { company: "University Research Lab", role: "Research Assistant", period: "2022 - 2023", description: "Assisted in developing novel manufacturing processes for composite materials." }
@@ -151,12 +149,6 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const { data: dbProjects = [] } = useQuery({ queryKey: ['projects'], queryFn: () => base44.entities.Project.list('order') });
-  const { data: dbExperiences = [] } = useQuery({ queryKey: ['experiences'], queryFn: () => base44.entities.Experience.list('order') });
-
-  const projects = dbProjects.length > 0 ? dbProjects.map(p => ({ title: p.title, desc: p.description, fullDesc: p.full_description, tags: p.tags || [], images: p.images || [] })) : fallbackProjects;
-  const experiences = dbExperiences.length > 0 ? dbExperiences : fallbackExperiences;
-
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   const openResume = () => window.open(`https://docs.google.com/viewer?url=${encodeURIComponent(RESUME_URL)}&embedded=true`, '_blank');
   const openLinkedIn = () => window.open(LINKEDIN_URL, '_blank');
@@ -270,7 +262,7 @@ export default function Home() {
                   <span className="font-sofia text-gray-500 text-sm mt-1 md:mt-0">{exp.period}</span>
                 </div>
                 <p className="font-sofia text-gray-700 font-medium mb-2">{exp.role}</p>
-                <p className="font-sofia text-gray-600 leading-relaxed">{exp.description || exp.desc}</p>
+                <p className="font-sofia text-gray-600 leading-relaxed">{exp.description}</p>
               </motion.div>
             ))}
           </div>

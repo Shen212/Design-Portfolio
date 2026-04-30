@@ -1,14 +1,15 @@
-import { createClient } from '@base44/sdk';
-import { appParams } from '@/lib/app-params';
+// Base44 has been removed. This file is a stub.
+// If your pages call base44.entities.X.list() etc., replace those
+// calls with local static data or a different data source.
 
-const { appId, token, functionsVersion, appBaseUrl } = appParams;
-
-//Create a client with authentication required
-export const base44 = createClient({
-  appId,
-  token,
-  functionsVersion,
-  serverUrl: '',
-  requiresAuth: false,
-  appBaseUrl
-});
+export const base44 = {
+  entities: new Proxy({}, {
+    get: () => ({
+      list: async () => [],
+      get: async () => null,
+      create: async (data) => data,
+      update: async (id, data) => data,
+      delete: async () => {},
+    })
+  })
+};
