@@ -13,13 +13,6 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   <Layout currentPageName={currentPageName}>{children}</Layout>
   : <>{children}</>;
 
-const PageNotFound = () => (
-  <div className="fixed inset-0 flex flex-col items-center justify-center">
-    <h1 className="text-4xl font-bold text-slate-800 mb-2">404</h1>
-    <p className="text-slate-500">Page not found.</p>
-  </div>
-);
-
 function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
