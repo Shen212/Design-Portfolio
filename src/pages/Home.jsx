@@ -99,9 +99,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-video bg-gray-100">
+            <div className="relative aspect-square md:aspect-video bg-gray-100">
               {images.length > 0 ? (
-                <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${images[currentImageIndex]})` }} />
+                <img
+                  src={images[currentImageIndex]}
+                  alt={project.title}
+                  className="w-full h-full object-contain"
+                />
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-200" />
               )}
@@ -236,9 +240,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {projects.map((project, idx) => (
               <motion.div key={idx} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.1, duration: 0.5 }} viewport={{ once: true }} className="group cursor-pointer" onClick={() => { setSelectedProject(project); setIsModalOpen(true); }}>
-                <div className="aspect-video bg-gray-100 mb-6 overflow-hidden rounded-lg">
+                <div className="aspect-square bg-gray-100 mb-6 overflow-hidden rounded-lg flex items-center justify-center">
                   {project.images && project.images.length > 0 ? (
-                    <div className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style={{ backgroundImage: `url(${project.images[0]})` }} />
+                    <img
+                      src={project.images[0]}
+                      alt={project.title}
+                      className="max-w-full max-h-full w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 group-hover:scale-105 transition-transform duration-500" />
                   )}
