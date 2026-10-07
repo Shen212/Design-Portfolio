@@ -1,0 +1,44 @@
+[
+  {
+    "company": "Karrotz Motorsports",
+    "role": "Production Engineer",
+    "period": "Jan 2026 - Current",
+    "description": "Diagnose and reverse-engineer obsolete or damaged parts on vintage and track-prepped vehicles, then design, machine, and fabricate custom brackets, mounts, and structural reinforcements to fit aftermarket components onto OEM chassis.",
+    "order": 1
+  },
+  {
+    "company": "Iron Focus Design",
+    "role": "Structural Design Engineer",
+    "period": "Sep 2023 - Dec 2023",
+    "description": "Designed code-compliant structural supports and scaffolding for food production machinery, using facility assessments and SolidWorks FEA to boost baking tray stacking efficiency by 30% while integrating ergonomic principles to reduce worker fatigue.",
+    "order": 2
+  },
+  {
+    "company": "Lumentum",
+    "role": "Design Engineer",
+    "period": "Jan 2023 - Apr 2023",
+    "description": "Designed fixtures for manufacturing precision laser optics to 100-micron accuracy, managing design revisions through Oracle Agile and presenting designs to cross-functional teams and clients.",
+    "order": 3
+  },
+  {
+    "company": "Ethos Automation",
+    "role": "Manufacturing Design Engineer",
+    "period": "May 2022 - Aug 2022",
+    "description": "Engineered robotic manufacturing cells and custom tooling for FANUC arms, developing robot motion paths and PLC/robotic assemblies and turning client GD&T specifications into production-ready tooling models.",
+    "order": 4
+  },
+  {
+    "company": "Opti Wheels",
+    "role": "CNC Machinist & Parts Engineer",
+    "period": "Sep 2021 - Dec 2021",
+    "description": "Programmed and operated a DMG MORI 5-axis CNC machine to manufacture custom performance wheels, writing and optimizing G-code for cycle time and surface finish.",
+    "order": 5
+  },
+  {
+    "company": "University of Waterloo – WATiMake",
+    "role": "WATiMake Technician",
+    "period": "May 2020 - Aug 2020",
+    "description": "Built MATLAB Simscape simulations of EV3 robots so students could perform robotics tasks virtually during COVID-19, validating the robot body with FEA stress analysis and topology optimization.",
+    "order": 6
+  }
+]

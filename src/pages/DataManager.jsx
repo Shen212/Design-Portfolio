@@ -1,9 +1,7 @@
 import React from 'react';
 
-// DataManager previously relied on Base44's backend for storing projects,
-// experiences, and images. Since Base44 has been removed, this page is now
-// a static read-only view. To add dynamic data management, integrate a
-// backend such as Supabase, Firebase, or a simple JSON file in the repo.
+// This page is a static pointer for editors — the portfolio's actual content
+// lives in the JSON files under /content, not in a database or admin UI.
 
 export default function DataManager() {
   return (
@@ -11,12 +9,12 @@ export default function DataManager() {
       <div className="max-w-lg text-center space-y-4">
         <h1 className="text-3xl font-bold text-gray-800">Data Manager</h1>
         <p className="text-gray-500 leading-relaxed">
-          This page previously used Base44's backend to manage projects, experiences,
-          and images. Base44 has been removed from this project.
-        </p>
-        <p className="text-gray-500 leading-relaxed">
-          To edit your portfolio content, update the static data arrays directly in{' '}
-          <code className="bg-gray-100 px-1 rounded text-sm">src/pages/Home.jsx</code>.
+          This portfolio has no admin backend. To edit content, update{' '}
+          <code className="bg-gray-100 px-1 rounded text-sm">content/projects.json</code>{' '}
+          and{' '}
+          <code className="bg-gray-100 px-1 rounded text-sm">content/experience.json</code>{' '}
+          directly, and add project images under{' '}
+          <code className="bg-gray-100 px-1 rounded text-sm">public/images/projects/&lt;id&gt;/</code>.
         </p>
         <a
           href="/"

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import projectsData from '../../content/projects.json';
+import experienceData from '../../content/experience.json';
 
 const RESUME_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6982c841a897702d6e66ef31/b24cafe04_NathanResume26.pdf";
 const LINKEDIN_URL = "https://www.linkedin.com/in/nathanshen47";
@@ -20,20 +22,26 @@ const navItems = [
   { num: "004", label: "Contact", id: "contact" }
 ];
 
-const projects = [
-  { title: "Wave Energy Converter", desc: "Designed and manufactured a miniature WEC to power ocean telemetry devices.", fullDesc: "Designed, manufactured and presented a miniature wave energy converter to power ocean telemetry devices which won the award for 'Most Practical Design' at the engineering capstone symposium.", tags: ["Capstone", "Manufacturing", "Renewable Energy"], images: [] },
-  { title: "Robotic Manufacturing Cells", desc: "Engineered robotic manufacturing cells and custom tooling for FANUC arms.", fullDesc: "Engineered robotic manufacturing cells and custom tooling for FANUC arms using SolidWorks, DFMA principles, and simulation.", tags: ["Robotics", "FANUC", "SolidWorks"], images: [] },
-  { title: "Precision Laser Optics Fixtures", desc: "Designed fixtures for manufacturing precision laser optics with 100 micron accuracy.", fullDesc: "Designed fixtures for the manufacturing of precision laser optics accounting for Hermetics, light exposure and ESD properties.", tags: ["Precision Engineering", "Optics", "PLM"], images: [] },
-  { title: "Stainless Steel Bolt-Action Pen", desc: "Precision machined a functional pen using manual lathe and mill.", fullDesc: "Precision machined a functional pen using a manual lathe and mill, applying advanced GD&T principles.", tags: ["Machining", "GD&T", "Personal Project"], images: [] },
-  { title: "EV3 Robot Simulations", desc: "Designed MATLAB Simscape simulations for virtual robotics education.", fullDesc: "Designed MATLAB Simscape simulations of EV3 robots with 3D parametric modeling.", tags: ["MATLAB", "Simscape", "Education"], images: [] },
-  { title: "CNC Wooden Catch-All Tray", desc: "Designed and CNC-routed a wooden tray with optimized toolpaths.", fullDesc: "Designed and CNC-routed a wooden catch-all tray, developing optimal toolpaths using CAM software.", tags: ["CNC", "CAM", "Woodworking"], images: [] }
-];
+// Project and experience content live in /content/*.json at the repo root so
+// they can be edited without touching this component. Each project entry is
+// normalized here into the { title, desc, fullDesc, tags, images } shape the
+// UI below expects: `desc` is the one-sentence card preview (from `summary`),
+// `fullDesc` is the longer paragraph shown when the card is clicked (from
+// `fullDescription`). To add a new project: add an entry to
+// content/projects.json and drop its images in public/images/projects/<id>/.
+const projects = [...projectsData]
+  .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+  .map((p) => ({
+    title: p.title,
+    desc: p.summary,
+    fullDesc: p.fullDescription,
+    tags: [p.category, ...(p.skills || [])].filter(Boolean).slice(0, 6),
+    images: (p.images || []).map((img) => `${import.meta.env.BASE_URL}images/projects/${p.id}/${img}`)
+  }));
 
-const experiences = [
-  { company: "Tesla", role: "Mechanical Engineering Intern", period: "Summer 2024", description: "Worked on battery thermal management systems for next-generation EV platforms." },
-  { company: "Boeing", role: "Design Engineering Co-op", period: "2023 - 2024", description: "Contributed to structural analysis of aircraft components using CATIA and ANSYS." },
-  { company: "University Research Lab", role: "Research Assistant", period: "2022 - 2023", description: "Assisted in developing novel manufacturing processes for composite materials." }
-];
+const experiences = [...experienceData]
+  .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+  .map((e) => ({ company: e.company, role: e.role, period: e.period, description: e.description }));
 
 const ScrambleName = () => {
   const targetName = "NATHAN SHEN";

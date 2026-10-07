@@ -1,0 +1,154 @@
+[
+  {
+    "id": "wave-energy-converter",
+    "title": "Wave Energy Converter",
+    "category": "Capstone Design Project",
+    "summary": "Designed and built a miniature wave energy converter to power ocean telemetry buoys as part of my engineering capstone.",
+    "fullDescription": "For my capstone design project, I designed a device that converts wave motion into electricity to power telemetry sensors in a buoy. I helped brainstorm and design the buoy itself, focusing on its mechanical components, and led the design and manufacturing of the testing rig used to validate it. The project drew on SolidWorks and Ansys for design and simulation, along with hands-on machining, 3D printing, woodworking, motor and electronics integration, gasket design, iterative prototyping, and close teamwork with the rest of the capstone group.",
+    "objective": "Design and create a device that can convert wave motion to electricity to power telemetry sensors in a buoy.",
+    "role": "Brainstorming and design of the buoy with a focus on mechanical components. Design and manufacturing of the testing rig.",
+    "skills": [
+      "SolidWorks",
+      "Ansys",
+      "Machining",
+      "3D Printing",
+      "Woodworking",
+      "Motors",
+      "Electronics",
+      "Gasket Design",
+      "Iterative Design",
+      "Teamwork"
+    ],
+    "notes": "",
+    "status": "Completed",
+    "order": 1,
+    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+  },
+  {
+    "id": "access-platforms",
+    "title": "Access Platforms",
+    "category": "Professional Project",
+    "summary": "Designed a code-compliant access platform that integrates into existing industrial infrastructure.",
+    "fullDescription": "I designed an operating platform that complies with building codes, including the simulated validation of platforms meant to integrate into pre-existing infrastructure. Ergonomic design principles, such as appropriate human stride length for stairs, shaped the layout. The work combined SolidWorks and SolidWorks FEA for modeling and structural validation, 3D scan files of the existing site, building code research, and user ergonomics considerations.",
+    "objective": "Design and create a device operating platform that complies with building codes.",
+    "role": "Design and simulated validation of the platforms that integrate into pre-existing infrastructure. Used ergonomic design principles such as human stride length for stairs.",
+    "skills": [
+      "SolidWorks",
+      "SolidWorks FEA",
+      "3D Scan Files",
+      "Building Code",
+      "User Ergonomics"
+    ],
+    "notes": "",
+    "status": "Completed",
+    "order": 2,
+    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+  },
+  {
+    "id": "baking-tray-extractor",
+    "title": "Baking Tray Extractor",
+    "category": "Professional Project",
+    "summary": "Designed a mechanism to extract used baking trays from a production line after surveying the site firsthand.",
+    "fullDescription": "I designed a system to extract used baking trays from a production line, starting with a site survey to understand the constraints before designing a solution to complete the task. The design used SolidWorks and SolidWorks FEA, 3D scan files of the site, and building code and user ergonomics research, along with selecting hardware such as casters, pistons, and linkages to make the mechanism work reliably.",
+    "objective": "Design and create a system to extract used baking trays from the production line.",
+    "role": "Surveyed the site and designed a solution to complete the task.",
+    "skills": [
+      "SolidWorks",
+      "SolidWorks FEA",
+      "3D Scan Files",
+      "Building Code",
+      "User Ergonomics",
+      "Hardware Selection (casters, pistons, linkages)"
+    ],
+    "notes": "",
+    "status": "Completed",
+    "order": 3,
+    "images": ["1.jpg", "2.jpg", "3.jpg"]
+  },
+  {
+    "id": "robotic-cell-station-design",
+    "title": "Robotic Cell Station Design",
+    "category": "Professional Project",
+    "summary": "Designed interchangeable stations for a robotic cell production line and produced their manufacturing drawings.",
+    "fullDescription": "I designed stations for a robotic cell production line that needed to be compatible with every other station in the cell, generating drawings for both manufacturing and simulation. The work centered on 3D modeling in SolidWorks with a focus on part and drawing functionality, and required close collaboration with machinists and programmers to account for DFM, DFS, and DFA considerations throughout.",
+    "objective": "Design stations in a robotic cell production line that are compatible with all other stations in the cell.",
+    "role": "Designed stations and generated drawings for both manufacturing and simulation.",
+    "skills": [
+      "3D Modeling in SolidWorks (Part & Drawing Functionality)",
+      "DFM / DFS / DFA Collaboration with Machinists and Programmers"
+    ],
+    "notes": "",
+    "status": "Completed",
+    "order": 4,
+    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+  },
+  {
+    "id": "robotic-cell-assemblies-layout",
+    "title": "Robotic Cell Assemblies & Layout",
+    "category": "Professional Project",
+    "summary": "Assembled and laid out an entire robotic cell in CAD so it could be visualized and programmed before being built.",
+    "fullDescription": "I assembled individual parts into assemblies and laid out all of the assemblies in CAD so the robotic cell could be visualized and programmed ahead of construction. This meant assembling parts for mirrored stations, aggregating all CAD files into a single layout based on the supplied floor plan, and designing additional parts as needed, such as door and forklift guards. The work relied on SolidWorks assembly and part design, AutoCAD, and organizational tools like Monday.com and Excel to keep everything coordinated.",
+    "objective": "Assemble individual parts into assemblies and lay out all assemblies into CAD so that the cell can be visualized and programmed.",
+    "role": "Assembled individual parts to create stations for mirrored parts and aggregated all CAD files to create a layout based on the supplied floor plan. Also designed additional parts as needed, such as door and forklift guards.",
+    "skills": [
+      "SolidWorks Assembly & Part Design",
+      "AutoCAD",
+      "Monday.com",
+      "Excel"
+    ],
+    "notes": "",
+    "status": "Completed",
+    "order": 5,
+    "images": ["1.jpg", "2.jpg"]
+  },
+  {
+    "id": "cnc-machinist",
+    "title": "CNC Machinist",
+    "category": "Professional Project",
+    "summary": "Worked as the sole CNC machinist producing aftermarket performance wheels on a fast-paced production line.",
+    "fullDescription": "I machined aftermarket performance wheels in an active, fast-paced production schedule, working as the sole machinist in the company. That meant being responsible for both running the CNC machine day to day and altering its programs as needed to keep production moving.",
+    "objective": "Machine aftermarket performance wheels in an active, fast-paced production schedule.",
+    "role": "Sole machinist in the company, responsible for both running the CNC machine and altering programs.",
+    "skills": [],
+    "notes": "",
+    "status": "Completed",
+    "order": 6,
+    "images": ["1.jpg", "2.jpg", "3.jpg"]
+  },
+  {
+    "id": "bolt-action-pen",
+    "title": "Bolt Action Pen",
+    "category": "Personal Project",
+    "summary": "Hand-machined five stainless-steel bolt-action pens as a personal machining project.",
+    "fullDescription": "As a personal project, I designed and produced five stainless-steel bolt-action pens. The build involved machining stainless steel and copper on a lathe and mill, applying design-for-manufacturing principles, and using GD&T to keep every part concentric across the assembled pen.",
+    "objective": "Design and produce 5 stainless-steel bolt-action pens.",
+    "role": "",
+    "skills": [
+      "Stainless Steel & Copper Machining (Lathe & Mill)",
+      "DFM",
+      "GD&T (machining parts to maintain concentricity across assembled parts)"
+    ],
+    "notes": "",
+    "status": "Completed",
+    "order": 7,
+    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
+  },
+  {
+    "id": "wooden-tray",
+    "title": "Wooden Tray",
+    "category": "Personal Project",
+    "summary": "CNC-routed a wooden catch-all tray for everyday items, refining the toolpaths along the way.",
+    "fullDescription": "As a personal project, I designed and produced a wooden tray to carry my everyday items, using CNC routing, CAD, and CAM generation to go from design to finished part. The biggest lesson came from the first prototype: it was cut with a ball-shaped end mill, which meant the toolpaths needed more overlap between passes to fully remove the ridges left behind.",
+    "objective": "Design and produce a wooden tray to carry my everyday items.",
+    "role": "",
+    "skills": [
+      "CNC Routing",
+      "CAD",
+      "CAM Generation"
+    ],
+    "notes": "Biggest lesson learned: the first prototype used a ball-shaped end mill, so more overlap between passes was needed to remove the ridges.",
+    "status": "Completed",
+    "order": 8,
+    "images": ["1.jpg", "2.jpg", "3.jpg"]
+  }
+]
