@@ -291,14 +291,16 @@ export default function Home() {
           <h2 className="font-antonio text-black text-4xl md:text-5xl lg:text-6xl mb-16">ABOUT ME</h2>
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-start">
             <div className="space-y-6">
-              <p className="font-sofia text-gray-600 text-lg leading-relaxed">I'm Nathan Shen, a passionate mechanical engineer with a focus on innovative design and sustainable solutions. Currently pursuing my degree at a top engineering program, I combine theoretical knowledge with hands-on experience.</p>
+              <p className="font-sofia text-gray-600 text-lg leading-relaxed">I'm Nathan Shen, a mechanical engineer with a focus on innovative design and sustainable solutions. I graduated from the University of Waterloo with a Bachelor of Applied Science in Mechanical Engineering, where I combined theoretical knowledge with hands-on experience through capstone design work, co-op placements, and time in the machine shop.</p>
               <p className="font-sofia text-gray-600 text-lg leading-relaxed">My interests span across robotics, thermal systems, and advanced manufacturing. I believe in engineering that makes a positive impact on people's lives and the environment.</p>
               <p className="font-sofia text-gray-600 text-lg leading-relaxed">Outside of engineering, you'll find me kayaking, snowboarding, rock climbing, or perfecting my golf swing. I believe staying active and adventurous keeps the creative mind sharp.</p>
             </div>
-            <div className="aspect-[4/5] bg-gray-200 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center">
-                <span className="font-sofia text-gray-400 text-sm">Photo</span>
-              </div>
+            <div className="w-full max-w-sm md:max-w-sm lg:max-w-md aspect-square rounded-lg overflow-hidden self-start">
+              <img
+                src={`${import.meta.env.BASE_URL}images/about/nathan.jpg`}
+                alt="Nathan Shen"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </motion.div>
